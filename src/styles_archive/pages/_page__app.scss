@@ -1,0 +1,9 @@
+body.product-app {
+  --pz__body-background: var(--gradient-dark);
+  --pz__text-color-primary: var(--white);
+  --pz__text-color-link: var(--white);
+}
+
+.product-app .pz__section-link {
+  margin-bottom: var(--grid-gutter);
+}

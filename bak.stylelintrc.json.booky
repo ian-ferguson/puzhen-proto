@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-prettier/recommended"
+  ],
+  "plugins": ["stylelint-selector-bem-pattern"],
+  "rules": {
+    "selector-class-pattern": "^[\\.][a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.util-[a-z]+$"
+      }
+    }
+  }
+}

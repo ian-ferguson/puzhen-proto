@@ -1,0 +1,165 @@
+@import 'mixins';
+
+/* ---------------- 
+*
+* Master variables
+*
+*--------------- */
+:root {
+  //--size-base: clamp(12px, 0.5rem, 24px); /* Sizing scale base */
+  --size-base: 0.5rem;
+  --radius-base: calc(var(--size-base) / 2);
+
+  /* Typography -------------------------------- */
+
+  --text-base: clamp(14px, 0.9rem, 24px); /* base text size */
+
+  @include media-portrait {
+    --text-base: clamp(10px, 0.875rem, 3vw);
+  }
+
+  --text-ratio: 1.25; /* ratio - heading to base */
+  --line-height-base: 1.8;
+  --line-height-headings: 1.1;
+  --family-body: 'Geist', sans-serif;
+  --body-weight: 300;
+  --family-heading: 'Geist', sans-serif;
+  --heading-weight: 200;
+  --fs-xs: calc(var(--text-base) / (var(--text-ratio) * var(--text-ratio)));
+  --fs-s: calc(var(--text-base) / var(--text-ratio));
+  --fs-m: var(--text-base);
+  --fs-l: calc(var(--text-base) * var(--text-ratio));
+  --fs-xl: calc(var(--text-base) * pow(var(--text-ratio), 2));
+  --fs-xxl: calc(var(--text-base) * pow(var(--text-ratio), 4));
+  --fs-xxxl: calc(var(--text-base) * pow(var(--text-ratio), 7));
+
+  /* Spacing ----------------------------------- */
+
+  --padding-xs: calc(var(--size-base) * 1);
+  --padding-s: calc(var(--size-base) * 1.5);
+  --padding-m: calc(var(--size-base) * 3);
+  --padding-l: calc(var(--size-base) * 5);
+  --padding-xl: calc(var(--size-base) * 12);
+
+  /* Seed Colours --------------------------------- */
+
+  --lightgray: rgb(1 0 0 / 10%);
+  --gray: rgb(1 0 0 / 20%);
+  --white: rgb(250 250 250 / 98%);
+  --offwhite: rgb(250 250 250 / 85%);
+  --whitesolid: rgb(250 250 250 / 100%);
+  --black: rgb(12 0 0 / 90%);
+  --pureblack: rgb(0 0 0 / 100%);
+  --accent: rgb(255 171 119 / 90%);
+
+  /* Background Gradients ------------------------- */
+  --gradient-light: linear-gradient(120deg, var(--white), var(--lightgray));
+  --gradient-dark: linear-gradient(120deg, var(--black), var(--pureblack));
+
+  /* Button Glow Gradient -------------------------- */
+  --gradient-glow:
+    linear-gradient(in lch to bottom right, cyan, transparent),
+    linear-gradient(in lch to top left, yellow, transparent),
+    linear-gradient(in lch longer to bottom left, magenta, transparent);
+  --glow-width: 0.25rem;
+
+  /* Background overlay --------------------------- */
+  --background-overlay-opacity: 0.1;
+
+  /* Grid --------------------------------------- */
+
+  /* Grids have an outside track that acts like a page margin, and inside tracks for the columns.
+  Main content is positioned on the inside tracks, full bleed content can spread out over the outside tracks
+  That looks like this, with '0's as the outside tracks and 'i's being the inside tracks
+  00000000000000
+  0iiiiiiiiiiii0
+  0iiiiiiiiiiii0
+  0iiiiiiiiiiii0
+  0iiiiiiiiiiii0  
+  00000000000000
+  */
+
+  --grid-gutter: calc(var(--size-base) * 18);
+  --grid-gutter-pixels: calc(var(--grid-gutter) * 1px);
+  --grid-gutter-top-min: calc(var(--size-base) * 18);
+  --grid-gutter-pixels: calc(var(--grid-gutter) * 1px);
+  --grid-columns: 6;
+  --grid-inside-width: calc(100vw - (2 * var(--grid-gutter)));
+  --grid-gap: var(--size-base);
+  --grid-items-per-row: 4;
+  --grid-items-aspect-ratio: 1.25;
+  --grid-items-row-height: calc(
+    (
+        (
+            var(--grid-inside-width) -
+              (var(--grid-gap) * (var(--grid-columns) - 1))
+          ) /
+          var(--grid-items-per-row)
+      ) *
+      var(--grid-items-aspect-ratio)
+  );
+  --grid-items-column-span: calc(
+    var(--grid-columns) / var(--grid-items-per-row)
+  );
+  --grid-items-row-span: 1;
+  --grid-item-max-height: 80vh;
+  --grid-slider-items-per-row: 3;
+  --grid-slider-item-width: calc(
+    (100% - ((var(--grid-slider-items-per-row) - 1) * var(--grid-gap))) /
+      var(--grid-slider-items-per-row)
+  );
+  --grid-default-columns: var(--grid-gutter)
+    repeat(var(--grid-columns), minmax(0, 1fr)) var(--grid-gutter);
+  --grid-default-rows: var(--grid-gutter) 1fr var(--grid-gutter);
+  --grid-portrait-rows: var(--grid-gutter) 1fr;
+}
+
+/* -- Portrait Media Query Variable Adjustments ------- */
+@include media-portrait {
+  :root {
+    --grid-gutter: calc(var(--size-base) * 3);
+    --grid-gutter-top-min: calc(var(--size-base) * 12);
+    --grid-columns: 4;
+    --grid-items-per-row: 2;
+    --grid-slider-items-per-row: 1;
+    --grid-default-rows: var(--grid-gutter-top-min) 1fr
+      var(--grid-gutter-top-min);
+  }
+}
+
+/* -- Landscape Media Query Variable Adjustments ------- */
+@include media-landscape {
+  :root {
+    --grid-gutter: clamp(
+      calc(var(--size-base) * 12),
+      calc(var(--size-base) * 18),
+      min(15dvh, 15vw)
+    );
+    --grid-gutter-top-min: calc(var(--size-base) * 18);
+    --grid-columns: 12;
+    --grid-slider-item-width: calc(
+      (100% - ((var(--grid-slider-items-per-row) - 1) * var(--grid-gap))) /
+        var(--grid-slider-items-per-row)
+    );
+  }
+}
+
+/* -------------------
+*
+* SVG Filter
+*
+*------------------- */
+
+/* ---------------- 
+*
+* Theme variables
+*
+*--------------- */
+:root {
+  --pz__body-background-default: var(--gradient-light);
+  --pz__body-background: var(--gradient-light);
+  --pz__text-color-primary: var(--black);
+  --pz__text-color-link: var(--black);
+  --pz__text-size-body: var(--fs-m);
+  --pz__text-size-heading: var(--fs-xl);
+}

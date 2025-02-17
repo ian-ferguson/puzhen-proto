@@ -1,0 +1,11 @@
+.pz__block-grid-slider {
+  display: flex;
+  overflow: hidden;
+  gap: var(--grid-gap);
+}
+
+.pz__block-grid-slider .pz__grid-item {
+  width: var(--grid-slider-item-width);
+  min-width: var(--grid-slider-item-width);
+  display: block;
+}

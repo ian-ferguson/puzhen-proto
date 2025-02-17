@@ -1,0 +1,137 @@
+@import './mixins';
+
+.pz__drawer {
+  position: fixed;
+  width: clamp(200px, 50%, 600px);
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: var(--whitesolid);
+  z-index: 12;
+  opacity: 0;
+  transform: translateX(100%);
+  will-change: transform, opacity;
+  transition:
+    transform 0.85s ease,
+    opacity 0.85s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@include media-portrait {
+  .pz__drawer {
+    width: 90dvw;
+  }
+}
+
+.pz__drawer[data-isOpen] {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.pz__filter::before {
+  content: '';
+  pointer-events: none;
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: rgb(0 0 0 / 0%);
+  transition: background-color 0.75s ease-out;
+}
+
+.pz__filter:has(.pz__drawer[data-isOpen])::before {
+  --background-overlay-opacity: 0.2;
+
+  content: '';
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: rgb(0 0 0 / var(--background-overlay-opacity));
+  mix-blend-mode: multiply;
+  transition: background-color 0.25s ease-out;
+  pointer-events: auto;
+}
+
+.pz__drawer-header {
+  width: 100%;
+  height: var(--grid-gutter-top-min);
+  padding: var(--padding-m);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pz__drawer-header h3 {
+  margin: 0;
+}
+
+.pz__drawer-toggle-close,
+.pz__drawer-toggle-open {
+  cursor: pointer;
+}
+
+.pz__drawer-toggle-close svg path {
+  stroke-width: 0.5;
+}
+
+/*
+.pz__drawer-toggle-close{
+  width: clamp(1.5rem, 60%, 3rem);
+  aspect-ratio: 1;
+}
+*/
+
+.pz__drawer-section {
+  overflow-y: auto;
+  padding: var(--padding-m);
+  flex-grow: 2;
+}
+
+.pz__filter-set {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-bottom: var(--padding-l);
+}
+
+.pz__filter-set-header {
+  margin-bottom: var(--padding-m);
+  text-transform: uppercase;
+}
+
+.pz__filter-set-contents {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-auto-flow: row;
+  grid-gap: var(--grid-gap);
+}
+
+.pz__drawer-submit {
+  width: 100%;
+  padding: var(--padding-m);
+
+  /* position:absolute;
+  bottom:0; */
+}
+
+.pz__drawer-submit button,
+.pz__drawer-submit input[type='submit'] {
+  width: 100%;
+}
+
+.pz__drawer label:has(input[type='checkbox']) {
+  padding: 0;
+
+  input {
+    align-self: start;
+  }
+}

@@ -1,0 +1,108 @@
+@import './mixins';
+
+/*
+.pz__drawer.pz__cart-drawer{
+  width:90dvw;
+}
+*/
+.pz__cart-header-product-count {
+  font-size: var(--fs-s);
+  color: var(--gray);
+}
+
+.pz__cart-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap);
+  border-top: 0.5px solid var(--gray);
+  padding-top: var(--padding-m);
+}
+
+.pz__cart-item {
+  display: grid;
+  grid-template-areas:
+    'thumb title  title price'
+    'thumb info info . '
+    'thumb quantity . remove '
+    'footer footer footer footer';
+  grid-template-rows: 1fr 2fr 1fr auto;
+  grid-template-columns: 25% 1fr 1fr 15%;
+  grid-gap: var(--grid-gap);
+  border-bottom: 0.5px solid var(--gray);
+}
+
+.pz__cart-item-image {
+  grid-area: thumb;
+}
+
+.pz__cart-item-title {
+  grid-area: title;
+  font-size: var(--fs-l);
+  place-self: self-start self-start;
+}
+
+.pz__cart-item-variant-info-wrapper {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+}
+
+.pz__cart-item-info {
+}
+
+.pz__cart-item-price {
+  grid-area: price;
+  font-size: var(--fs-l);
+  place-self: self-start self-end;
+}
+
+.pz__cart-item-qty {
+  grid-area: quantity;
+  align-self: self-end;
+}
+
+.pz__cart-item-remove {
+  grid-area: remove;
+  justify-self: self-end;
+}
+
+@include media-landscape {
+  .pz__cart-item-remove {
+    align-self: self-end;
+  }
+}
+
+.pz__cart-item-footer {
+  grid-area: footer;
+  padding: var(--padding-s) 0 var(--padding-s) 0;
+}
+
+.pz__cart-item-notice-add {
+  --pz__text-color-primary: var(--black);
+
+  display: flex;
+  gap: var(--grid-gap);
+}
+
+.pz__drawer-submit {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap);
+}
+
+.pz__cart-subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-l);
+  font-weight: 500;
+}
+
+.pz__cart-notice {
+  font-size: var(--fs-s);
+}
+
+.sidecart--paymentList {
+  display: flex;
+  justify-content: space-between;
+  filter: grayscale(100%);
+}

@@ -1,0 +1,63 @@
+@import './mixins';
+
+footer {
+  background-color: var(--black);
+  color: var(--offwhite);
+  min-height: 50dvh;
+  display: grid;
+  grid-template-columns: var(--grid-default-columns);
+  grid-template-rows: var(--grid-default-rows);
+}
+
+.pz__footer-menu {
+  grid-column: span 2;
+  grid-row-start: 2;
+}
+
+.pz__footer-menu:first-of-type {
+  grid-column: 2/4;
+}
+
+.pz__footer-menu-policies {
+  grid-column: 10/12;
+}
+
+.pz__footer-menu-shop {
+  grid-column: 12/14;
+}
+
+.pz__footer-menu,
+.pz__footer-menu > h2 {
+  font-size: var(--fs-s);
+}
+
+.pz__footer-menu > h2 {
+  margin-bottom: var(--padding-m);
+  color: var(--white);
+}
+
+@include media-portrait {
+  footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: var(--grid-gutter);
+    padding: var(--grid-gutter);
+  }
+
+  .pz__footer-menu,
+  .pz__footer-menu:first-of-type,
+  .pz__footer-menu-policies,
+  .pz__footer-menu-shop {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .pz__footer-menu,
+  .pz__footer-menu > h2 {
+    font-size: var(--fs-m);
+  }
+
+  .pz__footer-menu > h2 {
+    margin-bottom: var(--padding-m);
+  }
+}

@@ -1,0 +1,60 @@
+@import './mixins';
+
+.pz__block-accordian {
+  display: flex;
+  position: relative;
+}
+
+.pz__block-accordian details::marker {
+  content: '';
+}
+
+@include media-landscape {
+  .pz__block-accordian details summary {
+    text-transform: uppercase;
+    display: block;
+    cursor: pointer;
+    margin-right: var(--padding-m);
+  }
+
+  .pz__block-accordian details[open] summary {
+    text-decoration: underline;
+    text-underline-offset: var(--padding-s);
+  }
+
+  .pz__accordion-content-wrapper {
+    position: absolute;
+    left: 0;
+  }
+}
+
+@include media-portrait {
+  .pz__block-accordian {
+    flex-direction: column;
+    padding-top: var(--padding-m);
+    padding-bottom: var(--padding-m);
+  }
+
+  .pz__block-accordian details {
+    padding: var(--padding-m) 0 var(--padding-m) 0;
+    border-bottom: 1px solid var(--gray);
+  }
+
+  .pz__block-accordian details h3 {
+    margin: 0;
+  }
+
+  .pz__block-accordian details summary {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pz__block-accordian details summary::after {
+    content: '+';
+  }
+
+  .pz__accordion-content-wrapper {
+    position: relative;
+    margin-top: var(--padding-m);
+  }
+}

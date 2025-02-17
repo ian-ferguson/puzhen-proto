@@ -1,0 +1,18 @@
+body.about {
+  --pz__text-color-primary: var(--black);
+  --pz__text-color-link: var(--black);
+
+  background-image: inherit;
+}
+
+.about .hero-footer .hero-title {
+  color: var(--black);
+}
+
+.about h3 {
+  font-size: var(--fs-xxl);
+}
+
+.pz__section.pz__section__fullscreen-slide:last-of-type {
+  margin-bottom: 0;
+}

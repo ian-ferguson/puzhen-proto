@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--  Meta  -->
+    <meta charset="UTF-8" />
+    <title>PZ Design Guide</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1" />
+
+    <!--  Styles  -->
+    <link
+      rel="stylesheet"
+      href="styles/index.processed.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900"
+      rel="stylesheet" />
+  </head>
+
+  <body class="preload product">
+    <header>
+      <div class="pz_nav__logo">
+        <a
+          href="/"
+          class="pz__icon pz__icon-home"
+          ><span
+            ><svg
+              id="pz__logo"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 80 80">
+              <defs>
+                <style>
+                  .logo-fill {
+                    fill: #fff;
+                  }
+                </style>
+              </defs>
+              <path
+                id="wheel"
+                class="logo-fill"
+                d="M62.41,7.97c-3.87,5.84-7.76,11.67-11.65,17.5-.27.43-.84.53-1.27.26-.41-.29-.54-.86-.25-1.28,3.88-5.84,7.76-11.68,11.65-17.51.26-.42.83-.53,1.27-.25.42.27.54.85.24,1.27M19.11,73.04c3.87-5.82,7.75-11.67,11.64-17.5.29-.41.17-.99-.26-1.25-.4-.29-.98-.18-1.25.24-3.89,5.84-7.77,11.68-11.66,17.51-.27.43-.15,1,.25,1.28.44.26,1,.16,1.29-.27M46.79,78.5c.1.49.58.82,1.09.7.48-.08.8-.57.7-1.06-1.38-6.87-2.75-13.75-4.15-20.62-.1-.5-.57-.82-1.07-.72-.49.1-.82.58-.71,1.08,1.38,6.87,2.76,13.75,4.13,20.62M31.41,1.85c1.38,6.87,2.76,13.74,4.13,20.64.1.48.58.8,1.07.71.5-.1.82-.58.73-1.07-1.39-6.88-2.77-13.75-4.15-20.62-.11-.49-.58-.81-1.08-.73-.49.1-.82.59-.71,1.08M78.17,48.46c.49.1.98-.22,1.07-.71.1-.51-.23-.99-.71-1.08-6.88-1.36-13.75-2.71-20.64-4.07-.5-.1-.98.23-1.07.72-.12.5.22.97.7,1.07,6.88,1.34,13.78,2.7,20.65,4.07M17.46,8.05c3.9,5.83,7.82,11.65,11.71,17.47.29.41.85.52,1.28.24.41-.28.53-.84.25-1.26-3.91-5.84-7.82-11.65-11.73-17.48-.27-.41-.84-.54-1.25-.24-.43.28-.55.84-.26,1.26M48.45,1.83c.1-.49-.23-.97-.72-1.06-.49-.12-.97.21-1.07.7-1.35,6.88-2.71,13.75-4.06,20.63-.1.51.22.97.72,1.07.49.09.97-.22,1.08-.72,1.35-6.87,2.7-13.75,4.06-20.63M72.97,19c.41-.3.53-.86.25-1.28-.28-.42-.85-.54-1.27-.25-5.82,3.91-11.65,7.82-17.47,11.72-.41.27-.53.84-.25,1.26.28.43.85.54,1.28.26,5.83-3.91,11.65-7.82,17.46-11.71M1.47,33.35c6.87,1.36,13.75,2.7,20.64,4.05.49.11.97-.22,1.07-.72.1-.48-.22-.97-.72-1.07-6.88-1.35-13.75-2.72-20.64-4.07-.49-.1-.97.23-1.06.72-.1.5.23.98.72,1.09M78.5,33.21c.5-.12.82-.58.71-1.08-.09-.49-.57-.81-1.06-.7-6.88,1.37-13.75,2.76-20.63,4.13-.49.09-.81.57-.72,1.08.1.49.59.82,1.07.71,6.88-1.39,13.75-2.76,20.63-4.13M1.85,48.59c6.87-1.38,13.75-2.75,20.63-4.15.48-.09.81-.57.71-1.07-.1-.49-.58-.82-1.07-.72-6.88,1.37-13.75,2.76-20.63,4.15-.49.09-.82.57-.72,1.07.11.49.59.81,1.08.71M6.96,19.1c5.82,3.89,11.66,7.76,17.51,11.64.41.29.98.17,1.26-.25.27-.42.17-.99-.25-1.25-5.85-3.9-11.68-7.78-17.52-11.65-.42-.29-.98-.18-1.27.25-.28.41-.16.98.26,1.26M72.03,62.41c.43.28.99.17,1.27-.24.28-.43.16-.99-.26-1.25-5.83-3.9-11.68-7.79-17.5-11.67-.43-.27-.98-.15-1.28.25-.28.41-.15.99.26,1.28,5.84,3.88,11.66,7.76,17.51,11.64M8.05,62.53c5.81-3.91,11.64-7.82,17.46-11.72.41-.28.53-.84.24-1.27-.27-.41-.84-.54-1.25-.25-5.83,3.9-11.65,7.82-17.47,11.71-.42.29-.54.87-.24,1.27.26.43.85.54,1.27.26M33.33,78.53c1.36-6.88,2.72-13.75,4.07-20.62.11-.5-.23-.98-.72-1.06-.49-.11-.97.2-1.07.71-1.35,6.88-2.72,13.75-4.08,20.64-.09.48.23.98.73,1.07.49.1.98-.23,1.07-.72M61,72.98c.29.41.84.53,1.28.25.43-.29.54-.86.24-1.27-3.89-5.83-7.8-11.66-11.71-17.49-.27-.41-.84-.52-1.25-.24-.42.28-.53.85-.26,1.27,3.92,5.82,7.81,11.64,11.71,17.47M54.11,76.46c.19.47.72.7,1.2.49.46-.19.69-.72.48-1.18-2.67-6.48-5.36-12.96-8.02-19.43-.2-.47-.74-.7-1.21-.51-.46.2-.67.74-.49,1.2,2.68,6.48,5.36,12.96,8.05,19.43M4.23,55.81c6.49-2.69,12.96-5.37,19.43-8.04.47-.2.7-.74.5-1.2-.18-.48-.73-.69-1.2-.49-6.47,2.67-12.95,5.37-19.42,8.04-.47.19-.69.73-.49,1.2.19.47.73.69,1.19.5M75.76,55.81c.46.19.99-.03,1.19-.5.18-.47-.03-1-.5-1.2-6.47-2.68-12.95-5.37-19.41-8.04-.47-.2-1,.02-1.2.49-.19.46.02,1,.5,1.2,6.46,2.68,12.94,5.35,19.42,8.04M25.88,76.46c2.68-6.47,5.36-12.95,8.05-19.43.2-.46-.03-1-.49-1.2-.47-.19-1,.04-1.2.51-2.68,6.47-5.36,12.95-8.05,19.43-.2.46.03.99.5,1.18.46.21.99-.02,1.19-.49M24.19,4.24c2.68,6.47,5.37,12.94,8.05,19.42.2.47.73.68,1.2.49.46-.19.69-.72.49-1.19-2.68-6.48-5.37-12.96-8.05-19.44-.2-.46-.73-.68-1.19-.49-.47.2-.7.73-.5,1.2M55.79,4.24c.2-.47-.02-1-.48-1.2-.48-.19-1.01.03-1.2.49-2.68,6.48-5.38,12.96-8.05,19.44-.19.47.03,1,.49,1.19.47.2,1-.02,1.21-.49,2.67-6.48,5.35-12.95,8.02-19.42M76.45,25.88c.48-.19.69-.73.5-1.18-.2-.47-.73-.7-1.19-.5-6.48,2.68-12.96,5.36-19.42,8.04-.48.19-.69.73-.5,1.19.2.48.73.7,1.2.49,6.47-2.67,12.95-5.37,19.41-8.05M3.53,25.88c6.48,2.68,12.96,5.38,19.42,8.05.47.21,1-.01,1.2-.49.2-.47-.03-1-.5-1.19-6.47-2.68-12.96-5.37-19.41-8.04-.47-.2-1.01.03-1.2.5-.19.45.02.99.49,1.18M79.09,40.92c.5,0,.91-.42.91-.92s-.41-.93-.91-.93h-21.03c-.5,0-.91.42-.91.93s.41.92.91.92h21.03M.92,40.92h21.03c.5,0,.92-.42.92-.92s-.41-.93-.92-.93H.92c-.51,0-.92.42-.92.93s.4.92.92.92M11.7,13.01c4.96,4.96,9.92,9.92,14.88,14.87.36.36.94.36,1.3,0,.36-.35.36-.94,0-1.29-4.96-4.96-9.93-9.91-14.88-14.87-.35-.36-.94-.36-1.3,0-.35.35-.35.93,0,1.28M66.98,68.29c.36.35.93.35,1.3,0,.35-.36.35-.93,0-1.3-4.96-4.95-9.92-9.91-14.87-14.86-.36-.37-.94-.37-1.29,0-.36.35-.36.93,0,1.29,4.95,4.95,9.91,9.91,14.86,14.87M13,68.29c4.95-4.95,9.91-9.92,14.88-14.87.36-.36.36-.94,0-1.29-.36-.37-.94-.37-1.3,0-4.95,4.95-9.91,9.9-14.88,14.86-.35.37-.35.94,0,1.3.36.35.95.35,1.3,0M39.08.92v21.03c0,.51.42.91.92.91s.92-.4.92-.91V.92c0-.5-.41-.92-.92-.92s-.92.41-.92.92M68.29,13.01c.35-.36.35-.93,0-1.28-.37-.36-.95-.36-1.3,0-4.95,4.95-9.91,9.9-14.86,14.87-.36.35-.36.94,0,1.29.35.36.93.36,1.29,0,4.95-4.96,9.92-9.91,14.88-14.87M39.08,79.09c0,.51.42.91.92.91s.92-.4.92-.91v-21.04c0-.5-.41-.9-.92-.9s-.92.4-.92.9v21.04" /></svg></span
+        ></a>
+      </div>
+      <div
+        id="pz_drawer-toggle"
+        class="pz_nav__drawer-toggle">
+        <a class="pz__icon">
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              class="icon icon-hamburger"
+              viewBox="0 0 20 20">
+              <path
+                id="line1"
+                stroke="currentColor"
+                strokewidth="0.5"
+                d="M 5,8 h 10"></path>
+              <path
+                id="line2"
+                stroke="currentColor"
+                strokewidth="0.5"
+                d="M 5,10 h 10"></path>
+              <path
+                id="line3"
+                stroke="currentColor"
+                strokewidth="0.5"
+                d="M 5,10 h 10"></path>
+              <path
+                id="line4"
+                stroke="currentColor"
+                strokewidth="0.5"
+                d="M 5,12 h 10"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+      <nav class="pz_nav__group">
+        <div class="pz_nav__drawer">
+          <ul class="pz_nav__links-main">
+            <li>
+              <a
+                href="product-catalogue.html"
+                class="pz_nav__link glow"
+                >Products</a
+              >
+              <div class="pz_nav__mega-menu">
+                <ul class="pz_nav__mega-menu-submenu">
+                  <h2 class="pz_nav__link-tree">Categories</h2>
+                  <li><a href="product-catalogue.html">All Products</a></li>
+                  <li><a href="product-catalogue.html">Diffusers</a></li>
+                  <li><a href="product-catalogue.html">Essential Oils</a></li>
+                  <li><a href="product-catalogue.html">Teas</a></li>
+                  <li><a href="product-catalogue.html">Crystal Therapy</a></li>
+                </ul>
+                <ul class="pz_nav__mega-menu-submenu features">
+                  <li>
+                    <a
+                      class="pz_nav__mega-menu-feature-card"
+                      href="blog-post-3.html">
+                      <div class="feature-card__image">
+                        <img src="img/ad-test-1.jpg" />
+                      </div>
+                      <div class="feature-card__text">
+                        <p>Spring Scents</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a
+                href="session-catalogue.html"
+                class="pz_nav__link glow"
+                >Sessions</a
+              >
+              <div class="pz_nav__mega-menu">
+                <ul class="pz_nav__mega-menu-submenu">
+                  <h2 class="pz_nav__link-tree">Sessions</h2>
+                  <li><a href="product-app.html">App</a></li>
+                  <li><a href="session-catalogue.html">All Sessions</a></li>
+                  <li><a href="session-catalogue.html">Meditation</a></li>
+                  <li><a href="session-catalogue.html">Relaxation</a></li>
+                  <li><a href="session-catalogue.html">Courses</a></li>
+                </ul>
+                <ul class="pz_nav__mega-menu-submenu features">
+                  <li>
+                    <a
+                      class="pz_nav__mega-menu-feature-card"
+                      href="blog-post-4.html">
+                      <div class="feature-card__image">
+                        <img src="img/session4.jpg" />
+                      </div>
+                      <div class="feature-card__text">
+                        <p>Moonlight Meditation</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="pz_nav__mega-menu-feature-card"
+                      href="product-app.html">
+                      <div class="feature-card__image">
+                        <img src="img/puzhen-app-plain.jpg" />
+                      </div>
+                      <div class="feature-card__text">
+                        <p>Wellness Tiers</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a
+                href="about.html"
+                class="pz_nav__link glow"
+                >About<span class="pz_nav__link-tree">></span></a
+              >
+            </li>
+          </ul>
+          <ul class="pz_nav__links-secondary">
+            <li>
+              <a
+                href="account.html"
+                class="pz_nav__link account glow"
+                >Account</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="pz__cart">
+        <a
+          class="pz_nav__link cart glow pz__drawer-toggle-open"
+          data-toggle-target="pz__cart-drawer">
+          <span class="pz__cart-label-text">Cart</span>
+          <span class="pz__cart-label-icon pz__icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-shopping-cart">
+              <circle
+                cx="9"
+                cy="21"
+                r="1"></circle>
+              <circle
+                cx="20"
+                cy="21"
+                r="1"></circle>
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg
+          ></span>
+          <span class="cart-icon-product-count">3</span>
+        </a>
+        <div
+          class="pz__drawer pz__cart-drawer"
+          id="pz__cart-drawer">
+          <div class="pz__drawer-header">
+            <h3>Cart</h3>
+            <div class="pz__drawer-toggle pz__drawer-toggle-close">
+              <div class="pz__icon">
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    class="icon icon-close"
+                    viewBox="0 0 20 20">
+                    <path
+                      id="line1"
+                      stroke="currentColor"
+                      strokewidth="0.5"
+                      d="M 6.46,6.46 13.54,13.54"></path>
+                    <path
+                      id="line4"
+                      stroke="currentColor"
+                      strokewidth="0.5"
+                      d="M 6.46,13.54 13.54,6.46"></path></svg
+                ></span>
+              </div>
+            </div>
+          </div>
+          <div class="pz__drawer-section">
+            <div class="pz__cart-item-list">
+              <div class="pz__cart-item">
+                <div class="pz__cart-item-image">
+                  <img src="img/puzhen-diffuser-plain.jpg" />
+                </div>
+                <div class="pz__cart-item-title">Gemini</div>
+                <div class="pz__cart-item-variant-info-wrapper">
+                  <div class="pz__cart-item-info">Gold</div>
+                </div>
+                <div class="pz__cart-item-price">$999</div>
+                <div class="pz__cart-item-qty">
+                  <div class="quantityInputWrapper">
+                    <div class="quantityInput">
+                      <button
+                        class="quantity__button button-default button-inverted disabled"
+                        name="minus"
+                        type="button">
+                        -
+                      </button>
+                      <input
+                        class="quantity__input"
+                        type="number"
+                        name="quantity"
+                        value="1" />
+                      <button
+                        class="quantity__button button-default button-inverted"
+                        name="plus"
+                        type="button">
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="pz__cart-item-remove">
+                  <div class="pz__icon pz__icon-small">
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.25"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-trash">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path
+                          d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg
+                    ></span>
+                  </div>
+                </div>
+                <div class="pz__cart-item-footer">
+                  <div class="pz__cart-item-notice">
+                    <a class="pz__cart-item-notice-add">
+                      <div class="pz__icon pz__icon-small">
+                        <span
+                          ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.25"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="feather feather-plus">
+                            <line
+                              x1="12"
+                              y1="5"
+                              x2="12"
+                              y2="19"></line>
+                            <line
+                              x1="5"
+                              y1="12"
+                              x2="19"
+                              y2="12"></line></svg
+                        ></span>
+                      </div>
+                      <div>Add essential oils</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="pz__cart-item">
+                <div class="pz__cart-item-image">
+                  <img src="img/puzhen-jar-plain.jpg" />
+                </div>
+                <div class="pz__cart-item-title">Calm & Serenity</div>
+                <div class="pz__cart-item-variant-info-wrapper">
+                  <div class="pz__cart-item-info">15ml</div>
+                </div>
+                <div class="pz__cart-item-price">$28</div>
+                <div class="pz__cart-item-qty">
+                  <div class="quantityInputWrapper">
+                    <div class="quantityInput">
+                      <button
+                        class="quantity__button button-default button-inverted disabled"
+                        name="minus"
+                        type="button">
+                        -
+                      </button>
+                      <input
+                        class="quantity__input"
+                        type="number"
+                        name="quantity"
+                        value="2" />
+                      <button
+                        class="quantity__button button-default button-inverted"
+                        name="plus"
+                        type="button">
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="pz__cart-item-remove">
+                  <div class="pz__icon pz__icon-small">
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.25"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-trash">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path
+                          d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg
+                    ></span>
+                  </div>
+                </div>
+                <div class="pz__cart-item-footer">
+                  <div class="pz__cart-item-notice"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pz__drawer-submit">
+            <div class="pz__cart-subtotal">
+              <span>Subtotal</span>
+              <span>$26.00</span>
+            </div>
+            <div class="pz__cart-notice">
+              <p>Taxes and shipping calculated on checkout</p>
+            </div>
+            <input
+              type="submit"
+              class="button-default glow aura"
+              value="Checkout" />
+            <div class="pz__cart-payment-methods">
+              <span class="visually-hidden">Payment methods</span>
+              <ul
+                class="sidecart--paymentList"
+                role="list">
+                <li class="sidecart--paymentList--item">
+                  <svg
+                    class="icon icon--full-color"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    aria-labelledby="pi-american_express"
+                    viewBox="0 0 38 24"
+                    width="38"
+                    height="24">
+                    <title id="pi-american_express">American Express</title>
+                    <path
+                      fill="#000"
+                      d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z"
+                      opacity=".07"></path>
+                    <path
+                      fill="#006FCF"
+                      d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z"></path>
+                    <path
+                      fill="#FFF"
+                      d="M22.012 19.936v-8.421L37 11.528v2.326l-1.732 1.852L37 17.573v2.375h-2.766l-1.47-1.622-1.46 1.628-9.292-.02Z"></path>
+                    <path
+                      fill="#006FCF"
+                      d="M23.013 19.012v-6.57h5.572v1.513h-3.768v1.028h3.678v1.488h-3.678v1.01h3.768v1.531h-5.572Z"></path>
+                    <path
+                      fill="#006FCF"
+                      d="m28.557 19.012 3.083-3.289-3.083-3.282h2.386l1.884 2.083 1.89-2.082H37v.051l-3.017 3.23L37 18.92v.093h-2.307l-1.917-2.103-1.898 2.104h-2.321Z"></path>
+                    <path
+                      fill="#FFF"
+                      d="M22.71 4.04h3.614l1.269 2.881V4.04h4.46l.77 2.159.771-2.159H37v8.421H19l3.71-8.421Z"></path>
+                    <path
+                      fill="#006FCF"
+                      d="m23.395 4.955-2.916 6.566h2l.55-1.315h2.98l.55 1.315h2.05l-2.904-6.566h-2.31Zm.25 3.777.875-2.09.873 2.09h-1.748Z"></path>
+                    <path
+                      fill="#006FCF"
+                      d="M28.581 11.52V4.953l2.811.01L32.84 9l1.456-4.046H37v6.565l-1.74.016v-4.51l-1.644 4.494h-1.59L30.35 7.01v4.51h-1.768Z"></path>
+                  </svg>
+                </li>
+                <li class="sidecart--paymentList--item">
+                  <svg
+                    class="icon icon--full-color"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    x="0"
+                    y="0"
+                    width="38"
+                    height="24"
+                    viewBox="0 0 165.521 105.965"
+                    xml:space="preserve"
+                    aria-labelledby="pi-apple_pay">
+                    <title id="pi-apple_pay">Apple Pay</title>
+                    <path
+                      fill="#000"
+                      d="M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z"></path>
+                    <path
+                      fill="#FFF"
+                      d="M150.698 3.532l1.672.003c.452.003.905.008 1.36.02.793.022 1.719.065 2.583.22.75.135 1.38.34 1.984.648a6.392 6.392 0 0 1 2.804 2.807c.306.6.51 1.226.645 1.983.154.854.197 1.783.218 2.58.013.45.019.9.02 1.36.005.557.005 1.113.005 1.671v76.318c0 .558 0 1.114-.004 1.682-.002.45-.008.9-.02 1.35-.022.796-.065 1.725-.221 2.589a6.855 6.855 0 0 1-.645 1.975 6.397 6.397 0 0 1-2.808 2.807c-.6.306-1.228.511-1.971.645-.881.157-1.847.2-2.574.22-.457.01-.912.017-1.379.019-.555.004-1.113.004-1.669.004H14.801c-.55 0-1.1 0-1.66-.004a74.993 74.993 0 0 1-1.35-.018c-.744-.02-1.71-.064-2.584-.22a6.938 6.938 0 0 1-1.986-.65 6.337 6.337 0 0 1-1.622-1.18 6.355 6.355 0 0 1-1.178-1.623 6.935 6.935 0 0 1-.646-1.985c-.156-.863-.2-1.788-.22-2.578a66.088 66.088 0 0 1-.02-1.355l-.003-1.327V14.474l.002-1.325a66.7 66.7 0 0 1 .02-1.357c.022-.792.065-1.717.222-2.587a6.924 6.924 0 0 1 .646-1.981c.304-.598.7-1.144 1.18-1.623a6.386 6.386 0 0 1 1.624-1.18 6.96 6.96 0 0 1 1.98-.646c.865-.155 1.792-.198 2.586-.22.452-.012.905-.017 1.354-.02l1.677-.003h135.875"></path>
+                    <g>
+                      <g>
+                        <path
+                          fill="#000"
+                          d="M43.508 35.77c1.404-1.755 2.356-4.112 2.105-6.52-2.054.102-4.56 1.355-6.012 3.112-1.303 1.504-2.456 3.959-2.156 6.266 2.306.2 4.61-1.152 6.063-2.858"></path>
+                        <path
+                          fill="#000"
+                          d="M45.587 39.079c-3.35-.2-6.196 1.9-7.795 1.9-1.6 0-4.049-1.8-6.698-1.751-3.447.05-6.645 2-8.395 5.1-3.598 6.2-.95 15.4 2.55 20.45 1.699 2.5 3.747 5.25 6.445 5.151 2.55-.1 3.549-1.65 6.647-1.65 3.097 0 3.997 1.65 6.696 1.6 2.798-.05 4.548-2.5 6.247-5 1.95-2.85 2.747-5.6 2.797-5.75-.05-.05-5.396-2.101-5.446-8.251-.05-5.15 4.198-7.6 4.398-7.751-2.399-3.548-6.147-3.948-7.447-4.048"></path>
+                      </g>
+                      <g>
+                        <path
+                          fill="#000"
+                          d="M78.973 32.11c7.278 0 12.347 5.017 12.347 12.321 0 7.33-5.173 12.373-12.529 12.373h-8.058V69.62h-5.822V32.11h14.062zm-8.24 19.807h6.68c5.07 0 7.954-2.729 7.954-7.46 0-4.73-2.885-7.434-7.928-7.434h-6.706v14.894z"></path>
+                        <path
+                          fill="#000"
+                          d="M92.764 61.847c0-4.809 3.665-7.564 10.423-7.98l7.252-.442v-2.08c0-3.04-2.001-4.704-5.562-4.704-2.938 0-5.07 1.507-5.51 3.82h-5.252c.157-4.86 4.731-8.395 10.918-8.395 6.654 0 10.995 3.483 10.995 8.89v18.663h-5.38v-4.497h-.13c-1.534 2.937-4.914 4.782-8.579 4.782-5.406 0-9.175-3.222-9.175-8.057zm17.675-2.417v-2.106l-6.472.416c-3.64.234-5.536 1.585-5.536 3.95 0 2.288 1.975 3.77 5.068 3.77 3.95 0 6.94-2.522 6.94-6.03z"></path>
+                        <path
+                          fill="#000"
+                          d="M120.975 79.652v-4.496c.364.051 1.247.103 1.715.103 2.573 0 4.029-1.09 4.913-3.899l.52-1.663-9.852-27.293h6.082l6.863 22.146h.13l6.862-22.146h5.927l-10.216 28.67c-2.34 6.577-5.017 8.735-10.683 8.735-.442 0-1.872-.052-2.261-.157z"></path>
+                      </g>
+                    </g>
+                  </svg>
+                </li>
+                <li class="sidecart--paymentList--item">
+                  <svg
+                    class="icon icon--full-color"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    viewBox="0 0 38 24"
+                    width="38"
+                    height="24"
+                    aria-labelledby="pi-google_pay">
+                    <title id="pi-google_pay">Google Pay</title>
+                    <path
+                      d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                      fill="#000"
+                      opacity=".07"></path>
+                    <path
+                      d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+                      fill="#FFF"></path>
+                    <path
+                      d="M18.093 11.976v3.2h-1.018v-7.9h2.691a2.447 2.447 0 0 1 1.747.692 2.28 2.28 0 0 1 .11 3.224l-.11.116c-.47.447-1.098.69-1.747.674l-1.673-.006zm0-3.732v2.788h1.698c.377.012.741-.135 1.005-.404a1.391 1.391 0 0 0-1.005-2.354l-1.698-.03zm6.484 1.348c.65-.03 1.286.188 1.778.613.445.43.682 1.03.65 1.649v3.334h-.969v-.766h-.049a1.93 1.93 0 0 1-1.673.931 2.17 2.17 0 0 1-1.496-.533 1.667 1.667 0 0 1-.613-1.324 1.606 1.606 0 0 1 .613-1.336 2.746 2.746 0 0 1 1.698-.515c.517-.02 1.03.093 1.49.331v-.208a1.134 1.134 0 0 0-.417-.901 1.416 1.416 0 0 0-.98-.368 1.545 1.545 0 0 0-1.319.717l-.895-.564a2.488 2.488 0 0 1 2.182-1.06zM23.29 13.52a.79.79 0 0 0 .337.662c.223.176.5.269.785.263.429-.001.84-.17 1.146-.472.305-.286.478-.685.478-1.103a2.047 2.047 0 0 0-1.324-.374 1.716 1.716 0 0 0-1.03.294.883.883 0 0 0-.392.73zm9.286-3.75l-3.39 7.79h-1.048l1.281-2.728-2.224-5.062h1.103l1.612 3.885 1.569-3.885h1.097z"
+                      fill="#5F6368"></path>
+                    <path
+                      d="M13.986 11.284c0-.308-.024-.616-.073-.92h-4.29v1.747h2.451a2.096 2.096 0 0 1-.9 1.373v1.134h1.464a4.433 4.433 0 0 0 1.348-3.334z"
+                      fill="#4285F4"></path>
+                    <path
+                      d="M9.629 15.721a4.352 4.352 0 0 0 3.01-1.097l-1.466-1.14a2.752 2.752 0 0 1-4.094-1.44H5.577v1.17a4.53 4.53 0 0 0 4.052 2.507z"
+                      fill="#34A853"></path>
+                    <path
+                      d="M7.079 12.05a2.709 2.709 0 0 1 0-1.735v-1.17H5.577a4.505 4.505 0 0 0 0 4.075l1.502-1.17z"
+                      fill="#FBBC04"></path>
+                    <path
+                      d="M9.629 8.44a2.452 2.452 0 0 1 1.74.68l1.3-1.293a4.37 4.37 0 0 0-3.065-1.183 4.53 4.53 0 0 0-4.027 2.5l1.502 1.171a2.715 2.715 0 0 1 2.55-1.875z"
+                      fill="#EA4335"></path>
+                  </svg>
+                </li>
+                <li class="sidecart--paymentList--item">
+                  <svg
+                    class="icon icon--full-color"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    width="38"
+                    height="24"
+                    viewBox="0 0 38 24"
+                    aria-labelledby="pi-klarna">
+                    <title id="pi-klarna">Klarna</title>
+                    <g
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd">
+                      <path
+                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+                        fill="#FFB3C7"></path>
+                      <path
+                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+                        fill="#FFB3C7"></path>
+                      <path
+                        d="M34.117 13.184c-.487 0-.882.4-.882.892 0 .493.395.893.882.893.488 0 .883-.4.883-.893a.888.888 0 00-.883-.892zm-2.903-.69c0-.676-.57-1.223-1.274-1.223-.704 0-1.274.547-1.274 1.222 0 .675.57 1.223 1.274 1.223.704 0 1.274-.548 1.274-1.223zm.005-2.376h1.406v4.75h-1.406v-.303a2.446 2.446 0 01-1.394.435c-1.369 0-2.478-1.122-2.478-2.507 0-1.384 1.11-2.506 2.478-2.506.517 0 .996.16 1.394.435v-.304zm-11.253.619v-.619h-1.44v4.75h1.443v-2.217c0-.749.802-1.15 1.359-1.15h.016v-1.382c-.57 0-1.096.247-1.378.618zm-3.586 1.756c0-.675-.57-1.222-1.274-1.222-.703 0-1.274.547-1.274 1.222 0 .675.57 1.223 1.274 1.223.704 0 1.274-.548 1.274-1.223zm.005-2.375h1.406v4.75h-1.406v-.303A2.446 2.446 0 0114.99 15c-1.368 0-2.478-1.122-2.478-2.507 0-1.384 1.11-2.506 2.478-2.506.517 0 .997.16 1.394.435v-.304zm8.463-.128c-.561 0-1.093.177-1.448.663v-.535H22v4.75h1.417v-2.496c0-.722.479-1.076 1.055-1.076.618 0 .973.374.973 1.066v2.507h1.405v-3.021c0-1.106-.87-1.858-2.002-1.858zM10.465 14.87h1.472V8h-1.472v6.868zM4 14.87h1.558V8H4v6.87zM9.45 8a5.497 5.497 0 01-1.593 3.9l2.154 2.97H8.086l-2.341-3.228.604-.458A3.96 3.96 0 007.926 8H9.45z"
+                        fill="#0A0B09"
+                        fill-rule="nonzero"></path>
+                    </g>
+                  </svg>
+                </li>
+                <li class="sidecart--paymentList--item">
+                  <svg
+                    class="icon icon--full-color"
+                    viewBox="0 0 38 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="38"
+                    height="24"
+                    role="img"
+                    aria-labelledby="pi-maestro">
+                    <title id="pi-maestro">Maestro</title>
+                    <path
+                      opacity=".07"
+                      d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+                    <path
+                      fill="#fff"
+                      d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+                    <circle
+                      fill="#EB001B"
+                      cx="15"
+                      cy="12"
+                      r="7"></circle>
+                    <circle
+                      fill="#00A2E5"
+                      cx="23"
+                      cy="12"
+                      r="7"></circle>
+                    <path
+                      fill="#7375CF"
+                      d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path>
+                  </svg>
+                </li>
+                <li class="sidecart--paymentList--item">
+                  <svg
+                    class="icon icon--full-color"
+                    viewBox="0 0 38 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    width="38"
+                    height="24"
+                    aria-labelledby="pi-master">
+                    <title id="pi-master">Mastercard</title>
+                    <path
+                      opacity=".07"
+                      d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+                    <path
+                      fill="#fff"
+                      d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+                    <circle
+                      fill="#EB001B"
+                      cx="15"
+                      cy="12"
+                      r="7"></circle>
+                    <circle
+                      fill="#F79E1B"
+                      cx="23"
+                      cy="12"
+                      r="7"></circle>
+                    <path
+                      fill="#FF5F00"
+                      d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path>
+                  </svg>
+                </li>
+                <li class="sidecart--paymentList--item">
+                  <svg
+                    class="icon icon--full-color"
+                    viewBox="0 0 38 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="38"
+                    height="24"
+                    role="img"
+                    aria-labelledby="pi-paypal">
+                    <title id="pi-paypal">PayPal</title>
+                    <path
+                      opacity=".07"
+                      d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+                    <path
+                      fill="#fff"
+                      d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+                    <path
+                      fill="#003087"
+                      d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"></path>
+                    <path
+                      fill="#3086C8"
+                      d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"></path>
+                    <path
+                      fill="#012169"
+                      d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"></path>
+                  </svg>
+                </li>
+                <li class="sidecart--paymentList--item">
+                  <svg
+                    class="icon icon--full-color"
+                    viewBox="-36 25 38 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="38"
+                    height="24"
+                    role="img"
+                    aria-labelledby="pi-unionpay">
+                    <title id="pi-unionpay">Union Pay</title>
+                    <path
+                      fill="#005B9A"
+                      d="M-36 46.8v.7-.7zM-18.3 25v24h-7.2c-1.3 0-2.1-1-1.8-2.3l4.4-19.4c.3-1.3 1.9-2.3 3.2-2.3h1.4zm12.6 0c-1.3 0-2.9 1-3.2 2.3l-4.5 19.4c-.3 1.3.5 2.3 1.8 2.3h-4.9V25h10.8z"></path>
+                    <path
+                      fill="#E9292D"
+                      d="M-19.7 25c-1.3 0-2.9 1.1-3.2 2.3l-4.4 19.4c-.3 1.3.5 2.3 1.8 2.3h-8.9c-.8 0-1.5-.6-1.5-1.4v-21c0-.8.7-1.6 1.5-1.6h14.7z"></path>
+                    <path
+                      fill="#0E73B9"
+                      d="M-5.7 25c-1.3 0-2.9 1.1-3.2 2.3l-4.4 19.4c-.3 1.3.5 2.3 1.8 2.3H-26h.5c-1.3 0-2.1-1-1.8-2.3l4.4-19.4c.3-1.3 1.9-2.3 3.2-2.3h14z"></path>
+                    <path
+                      fill="#059DA4"
+                      d="M2 26.6v21c0 .8-.6 1.4-1.5 1.4h-12.1c-1.3 0-2.1-1.1-1.8-2.3l4.5-19.4C-8.6 26-7 25-5.7 25H.5c.9 0 1.5.7 1.5 1.6z"></path>
+                    <path
+                      fill="#fff"
+                      d="M-21.122 38.645h.14c.14 0 .28-.07.28-.14l.42-.63h1.19l-.21.35h1.4l-.21.63h-1.68c-.21.28-.42.42-.7.42h-.84l.21-.63m-.21.91h3.01l-.21.7h-1.19l-.21.7h1.19l-.21.7h-1.19l-.28 1.05c-.07.14 0 .28.28.21h.98l-.21.7h-1.89c-.35 0-.49-.21-.35-.63l.35-1.33h-.77l.21-.7h.77l.21-.7h-.7l.21-.7zm4.83-1.75v.42s.56-.42 1.12-.42h1.96l-.77 2.66c-.07.28-.35.49-.77.49h-2.24l-.49 1.89c0 .07 0 .14.14.14h.42l-.14.56h-1.12c-.42 0-.56-.14-.49-.35l1.47-5.39h.91zm1.68.77h-1.75l-.21.7s.28-.21.77-.21h1.05l.14-.49zm-.63 1.68c.14 0 .21 0 .21-.14l.14-.35h-1.75l-.14.56 1.54-.07zm-1.19.84h.98v.42h.28c.14 0 .21-.07.21-.14l.07-.28h.84l-.14.49c-.07.35-.35.49-.77.56h-.56v.77c0 .14.07.21.35.21h.49l-.14.56h-1.19c-.35 0-.49-.14-.49-.49l.07-2.1zm4.2-2.45l.21-.84h1.19l-.07.28s.56-.28 1.05-.28h1.47l-.21.84h-.21l-1.12 3.85h.21l-.21.77h-.21l-.07.35h-1.19l.07-.35h-2.17l.21-.77h.21l1.12-3.85h-.28m1.26 0l-.28 1.05s.49-.21.91-.28c.07-.35.21-.77.21-.77h-.84zm-.49 1.54l-.28 1.12s.56-.28.98-.28c.14-.42.21-.77.21-.77l-.91-.07zm.21 2.31l.21-.77h-.84l-.21.77h.84zm2.87-4.69h1.12l.07.42c0 .07.07.14.21.14h.21l-.21.7h-.77c-.28 0-.49-.07-.49-.35l-.14-.91zm-.35 1.47h3.57l-.21.77h-1.19l-.21.7h1.12l-.21.77h-1.26l-.28.42h.63l.14.84c0 .07.07.14.21.14h.21l-.21.7h-.7c-.35 0-.56-.07-.56-.35l-.14-.77-.56.84c-.14.21-.35.35-.63.35h-1.05l.21-.7h.35c.14 0 .21-.07.35-.21l.84-1.26h-1.05l.21-.77h1.19l.21-.7h-1.19l.21-.77zm-19.74-5.04c-.14.7-.42 1.19-.91 1.54-.49.35-1.12.56-1.89.56-.7 0-1.26-.21-1.54-.56-.21-.28-.35-.56-.35-.98 0-.14 0-.35.07-.56l.84-3.92h1.19l-.77 3.92v.28c0 .21.07.35.14.49.14.21.35.28.7.28s.7-.07.91-.28c.21-.21.42-.42.49-.77l.77-3.92h1.19l-.84 3.92m1.12-1.54h.84l-.07.49.14-.14c.28-.28.63-.42 1.05-.42.35 0 .63.14.77.35.14.21.21.49.14.91l-.49 2.38h-.91l.42-2.17c.07-.28.07-.49 0-.56-.07-.14-.21-.14-.35-.14-.21 0-.42.07-.56.21-.14.14-.28.35-.28.63l-.42 2.03h-.91l.63-3.57m9.8 0h.84l-.07.49.14-.14c.28-.28.63-.42 1.05-.42.35 0 .63.14.77.35s.21.49.14.91l-.49 2.38h-.91l.42-2.24c.07-.21 0-.42-.07-.49-.07-.14-.21-.14-.35-.14-.21 0-.42.07-.56.21-.14.14-.28.35-.28.63l-.42 2.03h-.91l.7-3.57m-5.81 0h.98l-.77 3.5h-.98l.77-3.5m.35-1.33h.98l-.21.84h-.98l.21-.84zm1.4 4.55c-.21-.21-.35-.56-.35-.98v-.21c0-.07 0-.21.07-.28.14-.56.35-1.05.7-1.33.35-.35.84-.49 1.33-.49.42 0 .77.14 1.05.35.21.21.35.56.35.98v.21c0 .07 0 .21-.07.28-.14.56-.35.98-.7 1.33-.35.35-.84.49-1.33.49-.35 0-.7-.14-1.05-.35m1.89-.7c.14-.21.28-.49.35-.84v-.35c0-.21-.07-.35-.14-.49a.635.635 0 0 0-.49-.21c-.28 0-.49.07-.63.28-.14.21-.28.49-.35.84v.28c0 .21.07.35.14.49.14.14.28.21.49.21.28.07.42 0 .63-.21m6.51-4.69h2.52c.49 0 .84.14 1.12.35.28.21.35.56.35.91v.28c0 .07 0 .21-.07.28-.07.49-.35.98-.7 1.26-.42.35-.84.49-1.4.49h-1.4l-.42 2.03h-1.19l1.19-5.6m.56 2.59h1.12c.28 0 .49-.07.7-.21.14-.14.28-.35.35-.63v-.28c0-.21-.07-.35-.21-.42-.14-.07-.35-.14-.7-.14h-.91l-.35 1.68zm8.68 3.71c-.35.77-.7 1.26-.91 1.47-.21.21-.63.7-1.61.7l.07-.63c.84-.28 1.26-1.4 1.54-1.96l-.28-3.78h1.19l.07 2.38.91-2.31h1.05l-2.03 4.13m-2.94-3.85l-.42.28c-.42-.35-.84-.56-1.54-.21-.98.49-1.89 4.13.91 2.94l.14.21h1.12l.7-3.29-.91.07m-.56 1.82c-.21.56-.56.84-.91.77-.28-.14-.35-.63-.21-1.19.21-.56.56-.84.91-.77.28.14.35.63.21 1.19"></path>
+                  </svg>
+                </li>
+                <li class="sidecart--paymentList--item">
+                  <svg
+                    class="icon icon--full-color"
+                    viewBox="0 0 38 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    width="38"
+                    height="24"
+                    aria-labelledby="pi-visa">
+                    <title id="pi-visa">Visa</title>
+                    <path
+                      opacity=".07"
+                      d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+                    <path
+                      fill="#fff"
+                      d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+                    <path
+                      d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+                      fill="#142688"></path>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main">
+      <section
+        class="pz__section hero"
+        data-headerColorScheme="light">
+        <div class="pz__block-background">
+          <img src="/img/puzhen-jar-plain.jpg" />
+        </div>
+        <div class="pz__block-background">
+          <img src="/img/puzhen-bottle-color.jpg" />
+        </div>
+        <div class="hero-footer">
+          <h1 class="hero-title title">Calm & Serenity</h1>
+          <span class="hero-subtitle">Essential Oil Sleep Series</span>
+        </div>
+      </section>
+      <section
+        class="pz__section"
+        data-colorScheme="dark">
+        <div class="pz__block split">
+          <div class="pz__block-product-atc">
+            <div class="pz__block-product-atc-inner-wrapper">
+              <div class="product__title visually-hidden">
+                <h1>Calm & Serenity</h1>
+              </div>
+              <div class="product__price">
+                <div class="price__container">
+                  <div class="price__regular">$40</div>
+                  <div class="price__sale">$22</div>
+                  <div class="unit-price"></div>
+                </div>
+                <div class="price__badge price__badge-sale">-45%</div>
+                <!--<div class="price__badge price__badge-sold-out">Out of Stock</div>-->
+                <div class="product__tax">Taxes included</div>
+              </div>
+              <div class="product__variants">
+                <fieldset class="product__variants-form checkbox-button-style">
+                  <legend>Size</legend>
+                  <input
+                    type="radio"
+                    id="product-size-1"
+                    name="product-size"
+                    value="5ml"
+                    checked
+                    style="--button-background-color: var(--accent)" />
+                  <label for="product-size-1">5ml</label>
+                  <input
+                    type="radio"
+                    id="product-size-2"
+                    name="product-size"
+                    value="10ml" />
+                  <label for="product-size-2">10ml</label>
+                </fieldset>
+              </div>
+              <div class="product__form">
+                <form id="product__form-add-to-cart">
+                  <button
+                    class="button-default button-checkout glow aura"
+                    id="product__form-add-to-cart-button"
+                    name="add"
+                    type="button">
+                    <span>Add to cart</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="pz__block-accordian">
+            <details
+              name="pz__accordion"
+              id="about"
+              open>
+              <summary>
+                <h3>About</h3>
+              </summary>
+              <div class="pz__accordion-content-wrapper">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  efficitur lectus et fermentum pretium. Morbi facilisis rhoncus
+                  accumsan. Quisque non imperdiet ligula. Donec vel porttitor
+                  justo. Praesent maximus dui eget magna facilisis, id laoreet
+                  enim imperdiet.
+                </p>
+                <ul>
+                  <p>
+                    Features
+                    <li>Pure essential oil</li>
+                    <li>Made in France</li>
+                  </p>
+                </ul>
+              </div>
+            </details>
+            <details
+              name="pz__accordion"
+              id="specs">
+              <summary>
+                <h3>Specs</h3>
+              </summary>
+              <div class="pz__accordion-content-wrapper">
+                <dl>
+                  <dt>Capacity</dt>
+                  <dd>3 x 10ml bottles</dd>
+                  <dt>Diffusion Time</dt>
+                  <dd>~12 hours per charge</dd>
+                  <dt>Lighting</dt>
+                  <dd>4 colors + white</dd>
+                  <dt>Audio</dt>
+                  <dd>Built-in Bluetooth speaker or preset music</dd>
+                  <dt>Modes</dt>
+                  <dd>
+                    Timed diffusion, Scheduled diffusion, Continuous diffusion
+                  </dd>
+                  <dt>Power</dt>
+                  <dd>Built in battery & USB-C charging</dd>
+                </dl>
+              </div>
+            </details>
+            <details
+              name="pz__accordion"
+              id="docs">
+              <summary>
+                <h3>Docs</h3>
+              </summary>
+              <div class="pz__accordion-content-wrapper">
+                <ul class="icon-list">
+                  <li class="icon-list-item list-item-file">
+                    User Manual [EN]
+                  </li>
+                  <li class="icon-list-item list-item-file">
+                    User Manual [ES]
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section
+        class="pz__section"
+        data-colorScheme="dark">
+        <div class="pz__section-header">
+          <h1>Related Products</h1>
+        </div>
+        <div class="pz__block-grid">
+          <div class="pz__grid-item">
+            <a
+              class="pz__card pz__card-product"
+              data-card-title="Calm &amp; Serenity"
+              href="product-basic.html">
+              <div class="card-image-wrapper">
+                <div class="card-image foreground">
+                  <img src="img/bottle-label-rose.jpg" />
+                </div>
+
+                <div class="card-image background">
+                  <img src="img/puzhen-bottle-color.jpg" />
+                </div>
+              </div>
+              <div class="card-text">
+                <h1 class="card-title title">Calm &amp; Serenity</h1>
+                <span class="card-price">$45</span>
+                <p class="card-subtitle">Essential Oil Sleep Series</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="pz__grid-item">
+            <a
+              class="pz__card pz__card-product"
+              data-card-title="Calm &amp; Serenity"
+              href="product-basic.html">
+              <div class="card-image-wrapper">
+                <div class="card-image foreground">
+                  <img src="img/bottle-label-rose.jpg" />
+                </div>
+
+                <div class="card-image background">
+                  <img src="img/puzhen-bottle-color.jpg" />
+                </div>
+              </div>
+              <div class="card-text">
+                <h1 class="card-title title">Calm &amp; Serenity</h1>
+                <span class="card-price">$45</span>
+                <p class="card-subtitle">Essential Oil Sleep Series</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="pz__grid-item">
+            <a
+              class="pz__card pz__card-product"
+              data-card-title="Calm &amp; Serenity"
+              href="product-basic.html">
+              <div class="card-image-wrapper">
+                <div class="card-image foreground">
+                  <img src="img/bottle-label-rose.jpg" />
+                </div>
+
+                <div class="card-image background">
+                  <img src="img/puzhen-bottle-color.jpg" />
+                </div>
+              </div>
+              <div class="card-text">
+                <h1 class="card-title title">Calm &amp; Serenity</h1>
+                <span class="card-price">$45</span>
+                <p class="card-subtitle">Essential Oil Sleep Series</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="pz__grid-item">
+            <a
+              class="pz__card pz__card-product"
+              data-card-title="Calm &amp; Serenity"
+              href="product-basic.html">
+              <div class="card-image-wrapper">
+                <div class="card-image foreground">
+                  <img src="img/bottle-label-rose.jpg" />
+                </div>
+
+                <div class="card-image background">
+                  <img src="img/puzhen-bottle-color.jpg" />
+                </div>
+              </div>
+              <div class="card-text">
+                <h1 class="card-title title">Calm &amp; Serenity</h1>
+                <span class="card-price">$45</span>
+                <p class="card-subtitle">Essential Oil Sleep Series</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- end pz__block-grid -->
+      </section>
+      <section
+        class="pz__section"
+        data-colorScheme="dark">
+        <div class="pz__section-header">
+          <h1>Related Sessions</h1>
+        </div>
+        <div class="pz__block-grid">
+          <div class="pz__grid-item">
+            <a
+              class="pz__card pz__card-session"
+              data-card-title="Moonlight Meditation"
+              href="session-basic-1.html"
+              style="--pz__card-background: url('../img/session4.jpg')">
+              <div class="card-image">
+                <img src="../img/session4.jpg" />
+              </div>
+
+              <div class="card-text">
+                <h1 class="card-title title">Moonlight Meditation</h1>
+                <p class="card-category">Meditation</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="pz__grid-item">
+            <a
+              class="pz__card pz__card-session"
+              data-card-title="Glory Rose"
+              href="session-basic-1.html"
+              style="--pz__card-background: url('../img/session9.jpg')">
+              <div class="card-image">
+                <img src="../img/session9.jpg" />
+              </div>
+
+              <div class="card-text">
+                <h1 class="card-title title">Glory Rose</h1>
+                <p class="card-category">Meditation</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="pz__footer-menu pz__footer-menu-products">
+        <h2>Products</h2>
+        <ul>
+          <li>Diffusers</li>
+          <li>Essential Oils</li>
+          <li>Crystal Therapy</li>
+          <li>Teas</li>
+          <li>Accessories</li>
+        </ul>
+      </div>
+      <div class="pz__footer-menu pz__footer-menu-sessions">
+        <h2>Sessions</h2>
+        <ul>
+          <li>App</li>
+          <li>Relaxation</li>
+          <li>Meditation</li>
+          <li>Courses</li>
+        </ul>
+      </div>
+      <div class="pz__footer-menu pz__footer-menu-about">
+        <h2>About</h2>
+        <ul>
+          <li>Our Story</li>
+          <li>Company Info</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+      <div class="pz__footer-menu pz__footer-menu-policies">
+        <h2>Policies</h2>
+        <ul>
+          <li>Returns</li>
+          <li>Payment Processing</li>
+          <li>Shipping</li>
+          <li>Safety Information</li>
+        </ul>
+      </div>
+      <div class="pz__footer-menu pz__footer-menu-shop">
+        <h2>Shop Settings</h2>
+        <ul>
+          <li>Language : EN</li>
+          <li>Currency : USD</li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://pixijs.download/release/pixi.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pixi-filters@latest/dist/browser/pixi-filters.min.js"></script>
+    <script src="scripts/section-image-banner.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

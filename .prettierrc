@@ -1,0 +1,8 @@
+{
+  "useTabs": false,
+  "singleQuote": true,
+  "singleAttributePerLine": true,
+  "htmlWhitespaceSensitivity": "css",
+  "bracketSpacing": true,
+  "bracketSameLine": true
+}

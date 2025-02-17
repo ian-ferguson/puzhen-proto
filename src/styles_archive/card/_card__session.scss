@@ -1,0 +1,166 @@
+@import './mixins';
+
+.pz__card-session {
+  --pz__text-color-primary: var(--white);
+  --pz__card-background: linear-gradient(to bottom, honeydew 75%, saddlebrown);
+
+  grid-column: span var(--grid-items-column-span);
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--padding-l) 1fr var(--padding-l);
+  grid-template-rows: var(--padding-l) 1fr var(--padding-l);
+  height: auto;
+  overflow: hidden;
+  background-color: var(--lightgray);
+  border-radius: var(--radius-base);
+}
+
+[data-colorScheme='light'] .pz__card-session {
+  background-color: rgba(255 255 255 / 5%);
+}
+
+.pz__card-session.pz__card-session-multisession::before {
+  content: '';
+  display: block;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  mix-blend-mode: multiply;
+  border-radius: var(--radius-base);
+  z-index: -1;
+  transform: translate(2px, -2px);
+  box-shadow:
+    2px -2px 0.5px hsla(0deg 0 20 / 80%),
+    2.5px -2.5px 0.5px hsla(0deg 0 20 / 80%);
+  will-change: transform, box-shadow;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+[data-colorScheme='light']
+  .pz__card-session.pz__card-session-multisession::before {
+  background-color: hsla(0deg 0 20 / 80%);
+  border: 0.5px solid rgba(0 0 0 / 50%);
+}
+
+.pz__card-session.pz__card-session-multisession:hover::before {
+  transform: translate(4px, -4px);
+  box-shadow:
+    4px -4px 0.5px hsla(0deg 0 20 / 80%),
+    4.5px -4.5px 0.5px hsla(0deg 0 20 / 80%);
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+@include media-landscape {
+  .pz__card-session::after {
+    content: '';
+    display: block;
+    background-image: var(--pz__card-background);
+    background-size: cover;
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    left: -5%;
+    top: -5%;
+    filter: blur(20px);
+    will-change: opacity;
+    opacity: 0.1;
+    transition: opacity 1s ease;
+  }
+
+  .pz__grid-item:has(.pz__card-session):hover .pz__card-session::after {
+    opacity: 0.5;
+  }
+}
+
+.pz__card-session .card-image {
+  border-radius: var(--radius-base);
+  grid-column: 2/3;
+  grid-row: 2/3;
+  z-index: 1;
+  overflow: hidden;
+}
+
+[data-colorScheme='light'] .pz__card-session .card-image {
+  border: 0.5px solid rgba(0 0 0 / 50%);
+}
+
+.pz__card-session .card-image img {
+  position: relative;
+  max-width: 150%;
+  width: 150%;
+  height: 150%;
+  left: -25%;
+  top: -25%;
+  filter: blur(20px);
+  will-change: filter;
+  transition: filter 1s ease;
+}
+
+.pz__grid-item:has(.pz__card-session):hover .card-image img {
+  filter: blur(0);
+}
+
+.pz__card-session .card-text {
+  display: contents;
+}
+
+.pz__card-session .card-title {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  align-self: end;
+  padding: var(--padding-m);
+  font-size: var(--fs-xxl);
+  z-index: 2;
+}
+
+.pz__card-session .card-category {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  align-self: start;
+  padding: var(--padding-m);
+  z-index: 2;
+}
+
+.pz__card-session .card-note {
+  grid-column: 1/4;
+  grid-row: 3/4;
+  align-self: center;
+  padding: var(--padding-m);
+  z-index: 2;
+}
+
+@include media-portrait {
+  .pz__card-session {
+    grid-template-columns:
+      var(--padding-s) calc(100% - 2 * var(--padding-s))
+      var(--padding-s);
+    grid-template-rows: var(--padding-s) 1fr var(--padding-l);
+    aspect-ratio: 1/1.25;
+    background-color: inherit;
+  }
+
+  .pz__card-session .card-image {
+    grid-column: 1/4;
+    grid-row: 1/3;
+  }
+
+  .pz__card-session .card-title {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    padding: var(--padding-s);
+    font-size: var(--fs-xl);
+  }
+
+  .pz__card-session .card-category {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    padding: var(--padding-s);
+  }
+
+  .pz__card-session .card-note {
+    padding: var(--padding-s);
+  }
+}

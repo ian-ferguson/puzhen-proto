@@ -1,0 +1,44 @@
+.pz__section:has(.pz__filter-bar) {
+  min-height: auto;
+  padding-top: var(--padding-s);
+}
+
+.pz__section:has(.pz__filter-bar) h1 {
+  grid-column: 2 / calc(var(--grid-columns) + 2);
+  height: var(--grid-gutter);
+  display: flex;
+  align-items: center;
+}
+
+.pz__filter-bar {
+  grid-column: 2 / calc(var(--grid-columns) + 2);
+  display: contents;
+}
+
+.pz__filter-bar .pz__filter {
+  grid-column: span 1;
+  margin-bottom: var(--padding-m);
+}
+
+.pz__filter-bar .pz__filter.filter {
+  grid-column: 2 / span 1;
+}
+
+.pz__filter-bar .pz__filter.search {
+  grid-column: var(--grid-columns) / calc(var(--grid-columns) + 2);
+}
+
+.pz__filter-bar .pz__filter-label {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--grid-gap);
+}
+
+.pz__filter-bar .pz__filter.search .pz__filter-label {
+  width: 100%;
+}
+
+.pz__filter-bar .pz__filter-icon {
+  width: var(--fs-s);
+  height: var(--fs-s);
+}

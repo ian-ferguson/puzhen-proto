@@ -1,0 +1,21 @@
+@import './mixins';
+
+.pz__section {
+  position: relative;
+  color: var(--pz__text-color-primary);
+}
+
+.pz__section {
+  display: grid;
+  grid-template-columns: var(--grid-default-columns);
+  grid-auto-rows: auto;
+  grid-gap: var(--grid-gap) var(--grid-gap);
+  overflow: hidden;
+  margin-bottom: var(--grid-gutter);
+}
+
+.pz__section-header,
+.pz__section-link {
+  grid-column: 2 / calc(var(--grid-columns) + 2);
+  grid-row: span 1;
+}

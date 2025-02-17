@@ -1,0 +1,17 @@
+@import './mixins';
+
+.pz__block {
+  grid-column: 2/-2;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+[class*='pz__block'].split > div {
+  grid-column: span calc(var(--grid-columns) / 2);
+}
+
+@include media-portrait {
+  [class*='pz__block'].split > div {
+    grid-column: span var(--grid-columns);
+  }
+}

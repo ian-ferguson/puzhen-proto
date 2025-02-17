@@ -1,0 +1,216 @@
+:root {
+  --gradient-glow:
+    linear-gradient(in lch to bottom right, cyan, transparent),
+    linear-gradient(in lch to top left, yellow, transparent),
+    linear-gradient(in lch longer to bottom left, magenta, transparent);
+  --glow-width: 0.25rem;
+}
+
+/* Glows */
+@keyframes glow-highlight {
+  0% {
+    background-position:
+      200% 50%,
+      200% 50%,
+      200% 50%;
+
+    /* background-size: calc(100% - 2 * var(--glow-width) - var(--radius-base)) calc(100% - 2 * var(--glow-width) - var(--radius-base)); */
+    background-size: 200% 60%;
+    filter: blur(0);
+    opacity: 0;
+  }
+
+  50% {
+    background-position:
+      100% 50%,
+      0% 50%,
+      -100% 50%;
+    background-size: 150% 30%;
+    filter: blur(var(--glow-width));
+    opacity: 0.5;
+  }
+
+  75% {
+    background-position:
+      0% 50%,
+      100% 50%,
+      -150% 50%;
+  }
+
+  100% {
+    background-position:
+      -150% 50%,
+      -150% 50%,
+      -150% 50%;
+  }
+}
+
+/* Glows */
+@keyframes glow-aura {
+  0% {
+    background-position:
+      200% 50%,
+      200% 50%,
+      200% 50%;
+    background-size: calc(100% - 2 * var(--glow-width) - var(--radius-base))
+      calc(100% - 2 * var(--glow-width) - var(--radius-base));
+    background-size: 200% 60%;
+    filter: blur(0);
+    opacity: 0;
+  }
+
+  50% {
+    background-position:
+      100% 50%,
+      0% 50%,
+      -100% 50%;
+    background-size: calc(100% - 2 * var(--glow-width) - var(--radius-base))
+      calc(100% - 2 * var(--glow-width) - var(--radius-base));
+    filter: blur(var(--glow-width));
+    opacity: 0.5;
+  }
+
+  75% {
+    background-position:
+      0% 50%,
+      100% 50%,
+      -150% 50%;
+  }
+
+  100% {
+    background-position:
+      -150% 50%,
+      -150% 50%,
+      -150% 50%;
+  }
+}
+
+.glow {
+  position: relative;
+}
+
+.glow::after {
+  content: '';
+  width: calc(100% + 2 * var(--glow-width));
+  height: calc(100% + 2 * var(--glow-width));
+  display: block;
+  z-index: -2;
+  position: absolute;
+  top: calc(-1 * var(--glow-width));
+  left: calc(-1 * var(--glow-width));
+  border-radius: var(--radius-base);
+  background: var(--gradient-glow);
+  background-repeat: no-repeat;
+
+  /* background-blend-mode: multiply; */
+  mix-blend-mode: multiply;
+  background-position:
+    -200% 50%,
+    -200% 50%,
+    -200% 50%;
+  background-size: calc(100% - 2 * var(--glow-width) - var(--radius-base))
+    calc(100% - 2 * var(--glow-width) - var(--radius-base));
+  filter: blur(0);
+  opacity: 0;
+  will-change: background-position, background-size, filter, opacity;
+}
+
+.glow:hover::after,
+.glow:has(input:focus)::after,
+.glow:has(input:active)::after {
+  z-index: -1;
+  animation: glow-highlight 1s ease-out normal;
+}
+
+.glow.aura::after {
+  animation: none;
+  transition: all 0.8s ease;
+}
+
+.glow.aura:hover::after,
+.glow.aura:has(input:focus)::after,
+.glow.aura:has(input:active)::after {
+  z-index: -1;
+  animation: none;
+  background-position:
+    80% 80%,
+    60% 60%,
+    50% 50%;
+  background-size: 100% 100%;
+  filter: blur(var(--glow-width));
+  opacity: 0.4;
+  transition: all 0.8s ease;
+}
+
+.glow.disabled::after,
+.glow.disabled:hover::after,
+.glow.aura.disabled::after,
+.glow.aura.disabled:hover::after {
+  display: none;
+}
+
+/* 
+*
+* Active Section Reveal Effects
+*
+*/
+
+.effect-fade {
+  p,
+  h1,
+  h2,
+  h3,
+  a,
+  img {
+    opacity: 0;
+    transform: translateY(calc(3 * var(--size-base)));
+    will-change: opacity, transform;
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.8s ease-out;
+  }
+
+  .active &,
+  &.active {
+    p,
+    h1,
+    h2,
+    h3,
+    a,
+    img {
+      opacity: 1;
+      transform: translateY(0);
+      will-change: opacity, transform;
+      transition:
+        opacity 0.6s ease-in,
+        transform 0.8s ease-in;
+    }
+  }
+}
+
+.effect-slide {
+  p,
+  h1,
+  h2,
+  h3,
+  a,
+  img {
+    transform: translateY(calc(3 * var(--size-base)));
+    will-change: transform;
+    transition: transform 0.8s ease-out;
+  }
+
+  .active &,
+  &.active {
+    p,
+    h1,
+    h2,
+    h3,
+    a,
+    img {
+      transform: translateY(0);
+      will-change: transform;
+      transition: transform 0.8s ease-in;
+    }
+  }
+}

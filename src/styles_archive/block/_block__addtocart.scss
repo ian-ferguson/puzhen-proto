@@ -1,0 +1,89 @@
+@import 'mixins';
+
+.pz__block-product-atc {
+}
+
+.pz__block-product-atc-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-m);
+  width: 66%;
+}
+
+@include media-portrait {
+  .pz__block-product-atc-inner-wrapper {
+    width: 100%;
+  }
+}
+
+.product__variants-form input[type='button'] {
+  display: none;
+}
+
+.product__price {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product__price:has(.price__badge-sold-out) {
+  .price__container {
+    opacity: 0.3;
+    text-decoration: line-through;
+  }
+
+  .price__sale {
+    display: none;
+  }
+
+  .price__badge-sale {
+    display: none;
+  }
+
+  .product__tax {
+    display: none;
+  }
+}
+
+.price__container {
+  display: flex;
+  gap: var(--grid-gap);
+}
+
+.price__regular,
+.price__sale {
+  font-size: var(--fs-xl);
+}
+
+.price__regular:has(+ .price__sale) {
+  color: var(--gray);
+  text-decoration: line-through;
+}
+
+.price__sale {
+  color: var(--accent);
+}
+
+.price__badge {
+  font-size: var(--fs-m);
+}
+
+.price__badge-sale {
+  color: var(--accent);
+
+  &::before {
+    content: '(';
+  }
+
+  &::after {
+    content: ')';
+  }
+}
+
+.price__badge-sold-out {
+}
+
+.product__tax {
+  font-size: var(--fs-xs);
+}

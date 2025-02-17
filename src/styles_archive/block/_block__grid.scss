@@ -1,0 +1,28 @@
+@import './mixins';
+
+.pz__section [class*='pz__block-grid'] {
+  grid-column: 2 / calc(var(--grid-columns) + 2);
+  grid-template-columns: subgrid;
+  counter-reset: grid-items;
+}
+
+.pz__block-grid {
+  display: grid;
+  grid-auto-rows: var(--grid-items-row-height);
+  grid-row-gap: var(--grid-gap);
+  grid-auto-flow: dense;
+}
+
+@include media-portrait {
+  .pz__block-grid {
+    grid-auto-rows: auto;
+  }
+}
+
+.pz__grid-item {
+  display: contents;
+}
+
+.product-catalogue:has(.pz__card-product:hover) .pz__card-product:not(:hover) {
+  opacity: 0.8;
+}

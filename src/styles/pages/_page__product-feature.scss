@@ -1,0 +1,10 @@
+.pz__block-inset-content.large p {
+  font-size: var(--fs-xl);
+}
+
+.pz__block-inset-content.large {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--grid-gutter);
+}

@@ -1,0 +1,74 @@
+@import './mixins';
+
+.pz__card-feature {
+  --pz__card-feature-text-background: inherit;
+  --pz__card-feature-text-color: inherit;
+
+  position: relative;
+  border-radius: var(--radius-base);
+  overflow: hidden;
+}
+
+.pz__card-feature.size2x2 {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+.pz__card-feature.size2x1 {
+  grid-column: span 6;
+  grid-row: span 1;
+}
+
+@include media-portrait {
+  .pz__card-feature.size2x2 {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+
+  .pz__card-feature.size2x1 {
+    grid-column: span 4;
+    grid-row: span 1;
+    max-height: var(--grid-items-row-height);
+  }
+}
+
+.pz__card-feature .card-image {
+  z-index: 0;
+  overflow: hidden;
+}
+
+.pz__card-feature .card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: var(--padding-m);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: var(--pz__card-feature-text-color);
+  background-color: var(--pz__card-feature-text-background);
+  background-blend-mode: multiply;
+  backdrop-filter: blur(3px);
+}
+
+.pz__card-feature .card-text h1 {
+  font-size: 2rem;
+}
+
+.pz__card-feature img {
+  will-change: filter, transform;
+  transition:
+    filter 0.5s ease,
+    transform 0.5s ease;
+}
+
+.pz__card-feature img {
+  filter: blur(50px);
+  transform: scale(110%);
+}
+
+.pz__card-feature:hover img {
+  filter: blur(0);
+  transform: scale(100%);
+}

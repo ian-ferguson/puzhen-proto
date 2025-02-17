@@ -1,0 +1,33 @@
+.pz__block-background {
+  /* grid-column: 1 / calc(var(--grid-columns) + 3); */
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  z-index: 1;
+  position: relative;
+}
+
+.pz__block-background.background-overlay::after {
+  --background-overlay-opacity: 0.2;
+
+  content: '';
+  display: block;
+  z-index: 2;
+  background-color: rgb(0 0 0 / var(--background-overlay-opacity));
+  mix-blend-mode: multiply;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.pz__block-background.background-blur {
+  --background-overlay-opacity: 0.3;
+
+  overflow: clip;
+
+  img {
+    transform: scale(120%);
+    filter: blur(40px) brightness(50%);
+  }
+}

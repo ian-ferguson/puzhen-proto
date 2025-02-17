@@ -1,0 +1,13 @@
+@mixin media-portrait {
+  @media screen and (aspect-ratio <= 11/10),
+    (aspect-ratio <= 11/10),
+    (hover: none) {
+    @content;
+  }
+}
+
+@mixin media-landscape {
+  @media screen and (aspect-ratio >= 11/10) {
+    @content;
+  }
+}

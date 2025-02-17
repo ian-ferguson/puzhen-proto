@@ -1,0 +1,17 @@
+body.home {
+  --pz__text-color-primary: var(--white);
+}
+
+body.home .pz__block-background::after {
+  --background-overlay-opacity: 0.05;
+}
+
+body.home .pz__section {
+  margin-bottom: 0;
+}
+
+body.home #pz6 {
+  --pz__text-color-primary: var(--black);
+
+  min-height: 720px;
+}
