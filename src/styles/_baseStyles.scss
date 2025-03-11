@@ -323,7 +323,6 @@ img {
   font-size-adjust: 0.507;
   font-size: var(--fs-l);
   line-height: calc(1.1 * var(--line-height-base));
-  hyphens: auto;
   -webkit-hyphenate-limit-before: 4;
   -webkit-hyphenate-limit-after: 3;
   -webkit-hyphenate-limit-lines: 2;
@@ -345,7 +344,6 @@ img {
 .prose h4,
 .prose h5,
 .prose h6 {
-  hyphens: manual;
   hyphens: manual;
 }
 
