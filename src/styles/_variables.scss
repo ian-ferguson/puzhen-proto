@@ -6,8 +6,8 @@
 *
 *--------------- */
 :root {
-  //--size-base: clamp(12px, 0.5rem, 24px); /* Sizing scale base */
-  --size-base: 0.5rem;
+  --size-base: clamp(12px, 0.5rem, 24px); /* Sizing scale base */
+  //--size-base: 0.5rem;
   --radius-base: calc(var(--size-base) / 2);
 
   /* Typography -------------------------------- */
@@ -70,13 +70,13 @@
 
   /* Grids have an outside track that acts like a page margin, and inside tracks for the columns.
   Main content is positioned on the inside tracks, full bleed content can spread out over the outside tracks
-  That looks like this, with '0's as the outside tracks and 'i's being the inside tracks
-  00000000000000
-  0iiiiiiiiiiii0
-  0iiiiiiiiiiii0
-  0iiiiiiiiiiii0
-  0iiiiiiiiiiii0  
-  00000000000000
+  That looks like this, with 'o's as the outside tracks and 'i's being the inside tracks
+  oooooooooooooo
+  oiiiiiiiiiiiio
+  oiiiiiiiiiiiio
+  oiiiiiiiiiiiio
+  oiiiiiiiiiiiio  
+  oooooooooooooo
   */
 
   --grid-gutter: calc(var(--size-base) * 18);
